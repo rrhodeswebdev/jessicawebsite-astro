@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { FC } from "react";
-import { HiOutlineMenu as MenuIcon } from "react-icons/hi";
+import { HiOutlineMenu as MenuIcon } from "react-icons/hi/index";
 import { Transition } from "@headlessui/react";
 
 interface INavbarProps {
