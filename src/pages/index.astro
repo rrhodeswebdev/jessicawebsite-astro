@@ -1,74 +1,45 @@
 ---
+import { sanityClient } from "../utils/sanityClient";
+import FullScreenHero from "../components/FullScreenHero";
+import Testimonials from "../components/Testimonials";
+import Button from "../components/Button";
+import homePageHeaderImage from "../homepage-hero-header.jpeg";
 import Layout from "../layouts/Layout.astro";
+
+const testimonialQuery = "*[_type == 'testimonials' && forPage == 'Home']";
+const testimonials = await sanityClient.fetch(testimonialQuery);
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-			above.
+<Layout
+	title="Home - Graced Studio"
+	description="Graced Studio by Jesse Rhodes is Concord's premiere salon for coloring and extension services."
+>
+	<FullScreenHero image={homePageHeaderImage} altText="Homepage Header" />
+	<div class="flex flex-col place-items-center mb-16 p-8">
+		<h1 class="text-2xl mb-4 text-center">Welcome to Graced Studio!</h1>
+		<p class="font-light text-lg text-center max-w-3xl">
+			Located in Concord, NC, we provide the highest quality color and
+			extension services in the surrounding Charlotte area. We can’t wait
+			to meet you!
 		</p>
-	</main>
+	</div>
+	<Testimonials testimonials={testimonials} />
+	<div
+		class="flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-center items-center p-6 md:mb-8"
+	>
+		<Button href="/new-clients">New Guests</Button>
+		<Button
+			href="https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start"
+			external
+		>
+			Book Now
+		</Button>
+		<Button href="/education">Education</Button>
+		<Button
+			href="https://loveamika.com/?rfsn=6430899.ee2b1b&utm_source=refersion&utm_medium=affiliate&utm_campaign=6430899.ee2b1b&offerid=43923&cn=gracedstudio"
+			external
+		>
+			Shop
+		</Button>
+	</div>
 </Layout>
-
-<style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4f39fa;
-		padding: 1rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
