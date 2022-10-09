@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 interface IAccountBioCardProps {
+	key: number;
 	name: string;
 	image: string;
 	title: string;
