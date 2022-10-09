@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Heading from '../../components/Heading';
+import Button from '../../components/Button';
+import camillaBioImage from "/public/camilla-alexander-bio.jpeg";
+---
+
+<Layout
+	title="Jesse Rhodes - Graced Studio"
+	description="Jesse Rhodes is a master colorist and extension artist with a passion for creating beautiful, natural, and unique designs."
+>
+    <div class="container mx-auto p-6 max-w-6xl">
+        <div>
+            <Heading title="Camilla Alexander" subHeading="Stylist" />
+            <div class="grid sm:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-8 mb-8">
+                <div>
+                    <img src={camillaBioImage} alt="placeholder" />
+                </div>
+                <div>
+                    <p class="font-light mb-4">
+                        Hi, my name is Camilla Alexander. I have been a licensed
+                        cosmetologist in North Carolina since March 2013. In addition to
+                        my license, I have specialized training in balayage, color
+                        formulations, and sculpting curly hair textures.
+                    </p>
+                    <p class="font-light mb-4">
+                        While I love working on all hair types and styles, I specialize
+                        in vibrant reds, creative colors and color corrections. I also
+                        enjoy educating clients on their hair type to help them achieve
+                        their style goals.
+                    </p>
+                    <p class="font-light mb-4">
+                        When I’m not behind the chair, you will find me spending most of
+                        my time with my family. I am a wife to my wonderful husband,
+                        Mason, and a mother to my beautiful son, Aidan. I am also a fur
+                        mother to two crazy cats, Lela and Loki. When I have time to
+                        myself, I love watching crime shows, enjoying coffee dates with
+                        close friends, and traveling to the beach.
+                    </p>
+                    <p class="font-light mb-4">
+                        In addition to my years of experience and expertise, I am
+                        passionate about helping each person who sits in my chair love
+                        themselves, inside and out. Whether you prefer a silent
+                        appointment to unwind and relax, or you need someone to share
+                        your cares with, I want every client to walk away from my chair
+                        expressing their true personality on the outside, and feeling
+                        better than when they arrived!
+                    </p>
+                    <p class="font-light mb-4">
+                        I am excited to partner with you to help you express your unique
+                        style! Click the Book Now button below to get started, and I
+                        will see you soon!
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center md:mb-8">
+                <Button
+                    href="https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start"
+                    external
+                >
+                    Book
+                </Button>
+                <Button href="/new-clients">New Clients</Button>
+            </div>
+        </div>
+    </div>
+</Layout>
