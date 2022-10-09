@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Heading from '../../components/Heading';
+import Button from '../../components/Button';
+import jennaColeyBioImage from "/public/jenna-coley-bio.jpeg";
+---
+
+<Layout
+	title="Jesse Rhodes - Graced Studio"
+	description="Jesse Rhodes is a master colorist and extension artist with a passion for creating beautiful, natural, and unique designs."
+>
+    <div class="container mx-auto p-6 max-w-6xl">
+        <div>
+            <Heading title="Jenna Coley" subHeading="Make-up Artist" />
+            <div class="grid sm:grid-cols-2 lg:grid-cols-[1fr_2fr] gap-8 mb-8">
+                <div>
+                    <img src={jennaColeyBioImage} alt="Jenna Coley" />
+                </div>
+                <div>
+                    <p class="font-light mb-4">
+                        Hi! I’m Jenna Coley, Graced Studio’s amazing make-up artist!
+                    </p>
+                    <p class="font-light mb-4">
+                        I’ve been a part of Graced Studio since the beginning. I’m
+                        Jesse’s sister, best friend, and (not so silent) business
+                        partner. I officially joined the talent team as a make-up artist
+                        in April of 2022, though I’ve been doing make-up professionally
+                        since early 2012.
+                    </p>
+                    <p class="font-light mb-4">
+                        Working with women to help them create the perfect look is
+                        something I’m sincerely passionate about. Enhancing a woman’s
+                        natural features with subtle make-up tips and tricks is my
+                        speciality, but I can also rock out a full-on glam look like a
+                        boss!
+                    </p>
+                    <p class="font-light mb-4">
+                        When I’m not working with brides, I like to spend my time with
+                        family and friends. I host monthly game nights that not only
+                        bring a lot of laughs, but can get pretty competitive! I’ve yet
+                        to meet anyone who can surpass my Disney trivia knowledge!
+                    </p>
+                    <p class="font-light mb-4">
+                        My furbaby, Balto, is the best! He’s an Alaskan malamute and I
+                        swear he’s more human than dog! He’s always excited to see me,
+                        and I love taking him to the mountains to play in the snow.
+                    </p>
+                    <p class="font-light mb-4">
+                        No matter the occasion, I’d love to help you achieve the make-up
+                        look that’s perfect for you! Click below to submit your
+                        appointment request, or email Graced Studio at
+                        jesse@graced.studio. I look forward to working with you soon!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row justify-center items-center p-6 md:mb-8">
+            <Button href="/services/bridal">Bridal</Button>
+        </div>
+    </div>
+</Layout>
