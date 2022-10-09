@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Heading from '../../components/Heading';
+import AccountBioCard from '../../components/AccountBioCard';
+import meetBabesImage from "/public/meet-babes-about.jpeg";
+import jesseBioImage from "/public/jesse-bio.jpeg";
+import camillaBioImage from "/public/camilla-bio.jpeg";
+import jennaBioImage from "/public/jenna-bio.jpeg";
+import gracedBioImage from "/public/graced-bio.jpeg";
+
+const bioMappings = [
+	{
+		id: 1,
+		name: 'Jesse',
+		image: jesseBioImage,
+		title: 'Owner/Stylist/Educator',
+		slug: 'jesse',
+	},
+	{
+		id: 2,
+		name: 'Camilla',
+		image: camillaBioImage,
+		title: 'Stylist',
+		slug: 'camilla',
+	},
+	{
+		id: 3,
+		name: 'Jenna',
+		image: jennaBioImage,
+		title: 'Makeup Artist',
+		slug: 'jenna',
+	},
+	{
+		id: 4,
+		name: 'Liliana',
+		image: gracedBioImage,
+		title: 'Original Graced Babe',
+		slug: 'liliana',
+	},
+];
+---
+
+<Layout
+	title="About - Graced Studio"
+	description="Graced Studio artists provide the highest quality services in a laid back, friendly, and clean environment."
+>
+    <div class="container mx-auto p-6 max-w-6xl">
+        <Heading title="The Graced Babes" />
+        <div class="mb-8 lg:mb-16 object-cover col-span-full lg:col-start-1 lg:col-end-4">
+            <img src={meetBabesImage} alt="Meet the babes" />
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-6 mb-16">
+            {bioMappings.map((bio) => (
+                <AccountBioCard
+                    key={bio.id}
+                    name={bio.name}
+                    image={bio.image}
+                    title={bio.title}
+                    slug={bio.slug}
+                />
+            ))}
+        </div>
+    </div>
+</Layout>
