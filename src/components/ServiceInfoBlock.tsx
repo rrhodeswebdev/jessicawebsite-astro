@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 interface IServiceInfoBlockProps {
+	key: string;
 	service: {
 		_id: string;
 		category: string;
