@@ -1,6 +1,7 @@
 import type { FC } from "react";
 
 interface IHoverCardProps {
+	key: number;
 	image: string;
 	slug: string;
 	buttonText: string;

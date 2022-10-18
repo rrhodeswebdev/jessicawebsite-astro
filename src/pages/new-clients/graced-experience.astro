@@ -1,0 +1,160 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Heading from "../../components/Heading";
+import Button from "../../components/Button";
+import gettingStartedImage from "/public/getting-started.jpeg";
+import youveArrivedImage from "/public/youve-arrived.jpeg";
+import letsChatImage from "/public/lets-chat.jpeg";
+import creatingMagicImage from "/public/creating-magic.jpeg";
+import nextTimeImage from "/public/next-time.jpeg";
+---
+
+<Layout
+	title="Graced Experience - Graced Studio"
+	description="Welcome to your new salon home at Graced Studio, where the guest experience is all about you."
+>
+    <div class="container mx-auto p-6 max-w-6xl">
+        <Heading title="The Graced Experience" />
+        <div class="mb-16 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-[1fr_2fr]">
+            <div class="mb-8 sm:mb-0">
+                <img
+                    src={gettingStartedImage}
+                    alt="Getting started with a graced experience"
+                />
+            </div>
+            <div>
+                <h3 class="text-2xl lg:text-3xl text-center sm:text-left font-light mb-8">
+                    Getting Started
+                </h3>
+                <p class="font-light">
+                    Start your experience by booking your service online or by
+                    submitting a service request. Services booked online will be
+                    received and acknowledged within 24 hours via system text. Service
+                    request emails will be reviewed and you will receive an email
+                    response within 48 hours.
+                </p>
+            </div>
+        </div>
+        <div class="mb-16 border border-lightGray" />
+        <div class="mb-16 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-[2fr_1fr]">
+            <div class="mb-8 sm:mb-0 sm:order-last">
+                <img src={youveArrivedImage} alt="You've arrived at the studio" />
+            </div>
+            <div>
+                <h3 class="text-2xl lg:text-3xl text-center sm:text-left font-light mb-8">
+                    You&rsquo;ve Arrived
+                </h3>
+                <p class="font-light">
+                    Plan to arrive early to the salon so you have plenty of time to
+                    get settled in your new salon home. You will be greeted with a
+                    friendly hello and warm smile. Refreshments are available, wifi is
+                    free, phone chargers for iPhone and Android are provided, and
+                    magazines are always up to date! You will be asked to complete the
+                    new client forms and policies before your service begins. If you’d
+                    like to save some time, feel free to fill those out{' '}
+                    <a
+                        href="https://www.jotform.com/app/221617351610143"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="text-secondary hover:underline"
+                    >
+                        here
+                    </a>
+                    .
+                </p>
+            </div>
+        </div>
+        <div class="mb-16 border border-lightGray" />
+        <div class="mb-16 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-[1fr_2fr]">
+            <div class="mb-8 sm:mb-0">
+                <img src={letsChatImage} alt="Let's start the conversation" />
+            </div>
+            <div>
+                <h3 class="text-2xl lg:text-3xl text-center sm:text-left font-light mb-8">
+                    Let&rsquo;s Chat
+                </h3>
+                <p class="font-light mb-4">
+                    The first priority after we meet is making sure we understand the
+                    goals of the appointment. We will discuss hair history, daily hair
+                    care routines, hair goals, and budget.
+                </p>
+                <p class="font-light mb-4">
+                    Together we will come up with a realistic plan on how to achieve
+                    your desired results while staying within your beauty budget.
+                    We’ll go over any questions you have, including maintenance
+                    schedule, home care requirements, and any other details you may
+                    want to know. Once you are fully comfortable, we will move forward
+                    and begin the service!
+                </p>
+            </div>
+        </div>
+        <div class="mb-16 border border-lightGray" />
+        <div class="mb-16 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-[2fr_1fr]">
+            <div class="mb-8 sm:mb-0 sm:order-last">
+                <img
+                    src={creatingMagicImage}
+                    alt="Getting started with a graced experience"
+                />
+            </div>
+            <div>
+                <h3 class="text-2xl lg:text-3xl text-center sm:text-left font-light mb-8">
+                    Creating Magic
+                </h3>
+                <p class="font-light mb-4">
+                    Now that the plan has been established, the budget agreed upon,
+                    and all questions answered, it’s time to make magic happen! We
+                    pride ourselves on using the best products to ensure your hair
+                    stays healthy and beautiful. We work efficiently and respect your
+                    time, but don’t sacrifice the process it takes to achieve your
+                    goals.
+                </p>
+                <p class="font-light mb-4">
+                    This time is YOUR time, and we take our leads from you. If you
+                    want to read a book, watch a show on your device, work on your
+                    laptop, sit in silence, or chat the whole time - it’s totally up
+                    to you! Water, coffee, and Diet Coke are always available, as well
+                    as savory snacks and an assortment of chocolates. Use this time to
+                    unwind and relax as you please!
+                </p>
+            </div>
+        </div>
+        <div class="mb-16 border border-lightGray" />
+        <div class="mb-16 sm:grid sm:gap-8 sm:grid-cols-2 lg:grid-cols-[1fr_2fr]">
+            <div class="mb-8 sm:mb-0">
+                <img
+                    src={nextTimeImage}
+                    alt="Next time at the graced experience"
+                />
+            </div>
+            <div>
+                <h3 class="text-2xl lg:text-3xl text-center sm:text-left font-light mb-8">
+                    Until Next Time
+                </h3>
+                <p class="font-light mb-4">
+                    Once your service is complete, we will once again discuss home
+                    care. We carry the full Amika hair care line and may recommend
+                    certain products for you. However, if you don’t wish to purchase
+                    products in the salon, we do offer a unique link to shop all your
+                    retail needs online. Graced Studio accepts cash, credit, debit, or
+                    ApplePay as forms of payment. You will have the option to prebook
+                    your next appointment before you leave, or you can always rebook
+                    online at your convenience.
+                </p>
+                <p class="font-light mb-4">
+                    Before you go, we’ll take some photos to show off your beautiful
+                    new hair! Photos are always shown to you for approval before being
+                    used on social media. Still have questions? Feel free to contact
+                    us. We can’t wait to meet you soon!
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-6 md:mb-8">
+            <Button
+                href="https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start"
+                external
+            >
+                Book Now
+            </Button>
+        </div>
+    </div>
+</Layout>
