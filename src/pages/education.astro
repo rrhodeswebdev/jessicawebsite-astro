@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Heading from "../components/Heading";
+import Button from "../components/Button";
+import hollyEducation from "/public/holly-education.jpeg";
+import ashleyEducation from "/public/ashley-education.jpeg";
+import tabithaEducation from "/public/tabitha-education.jpeg";
+---
+
+<Layout
+	title="Education - Graced Studio"
+	description="Join me in learning today's best methods for applying extensions and other services for your clients."
+>
+    <section class="container mx-auto max-w-6xl px-8">
+        <Heading title="Graced With Laced" />
+        <div class="flex flex-wrap flew-col sm:flex-nowrap sm:flex-row gap-4 mb-8">
+            <div class="mb-6">
+                <img src={hollyEducation} alt="Holly" />
+            </div>
+            <div class="mb-6">
+                <img src={ashleyEducation} alt="Ashley" />
+            </div>
+            <div class="mb-6">
+                <img src={tabithaEducation} alt="Tabitha" />
+            </div>
+        </div>
+        <div class="mb-16">
+            <p class="font-light mb-4">
+                As a Laced Academy Educator, Jesse enjoys traveling all over the US
+                to teach stylists the art of hair extensions. Laced offers every
+                extension method needed to provide a customized experience for your
+                client’s individual needs. Extensions aren’t a “one-size-fits-all”
+                service, and neither is education!
+            </p>
+            <p class="font-light mb-4">
+                In any Laced Academy training course, you can expect class sizes to
+                remain small. This ensures each attendee is able to ask questions
+                and receive one-on-one instruction and critique. Attendees will
+                learn the fundamentals of proper extension installation, removal,
+                blending, and maintenance of extensions, as well as basic business
+                and marketing strategies to help build your extension business. Each
+                class comes with access to the Laced Academy online instruction
+                video, as well as access to the private Laced Academy Facebook
+                group. Check out the upcoming Laced Academy line-up to sign up for a
+                class near you! One-on-one classes are also available upon request.
+            </p>
+        </div>
+        <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-6 md:mb-8">
+            <Button
+                href="https://lacedhair.com/collections/academy-training-courses"
+                external
+            >
+                Classes
+            </Button>
+            <Button
+                href="https://lacedhair.com/pages/custom-1-on-1-training"
+                external
+            >
+                1-on-1
+            </Button>
+        </div>
+    </section>
+</Layout>
