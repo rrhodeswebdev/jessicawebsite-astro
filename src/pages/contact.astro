@@ -1,0 +1,65 @@
+---
+import { sanityClient } from "../utils/sanityClient";
+import Layout from "../layouts/Layout.astro";
+import Heading from "../components/Heading";
+import SubHeading from "../components/SubHeading";
+import ContactForm from "../components/ContactForm";
+import letsConnectImage from "/public/lets-connect.jpeg";
+---
+
+<Layout
+	title="Contact - Graced Studio"
+	description="Graced Studio by Jesse Rhodes is Concord's premiere salon for coloring and extension services."
+>
+	<div class="container mx-auto p-6 max-w-6xl">
+		<Heading title="Let's Connect" />
+		<div class="mb-12">
+			<img src={letsConnectImage} alt="Contact Header Image" />
+		</div>
+		<div class="flex flex-wrap flex-col md:flex-row w-full">
+			<div class="flex flex-col flex-1 md:pr-8 mb-8">
+				<div class="mb-6">
+					<SubHeading title="Email" />
+					<p class="font-light text-accent hover:underline">
+						<a href="mailto:jesse@graced.studio">jesse@graced.studio</a>
+					</p>
+				</div>
+				<div class="mb-6">
+					<SubHeading title="Phone" />
+					<p class="font-light text-accent hover:underline">
+						<a href="tel:7047969365">(704) 796-9365</a>
+					</p>
+				</div>
+				<div class="mb-6">
+					<SubHeading title="Address" />
+					<p class="font-light text-accent hover:underline">
+						<a
+							href="https://goo.gl/maps/9r5EU137fPgWvzmt9"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Graced Studio
+							<br />
+							1940 Kannapolis Hwy
+							<br />
+							Suite #5
+							<br />
+							Concord, NC 28027
+						</a>
+					</p>
+				</div>
+				<div class="mb-6">
+					<SubHeading title="Hours" />
+					<p class="font-light text-accent">Tuesday 9-8</p>
+					<p class="font-light text-accent">Wednesday 12-8</p>
+					<p class="font-light text-accent">Thursday 9-8</p>
+					<p class="font-light text-accent">Friday 9-5</p>
+					<p class="font-light text-accent">Saturday 9-1</p>
+				</div>
+			</div>
+			<div class="flex flex-col flex-1">
+				<ContactForm />
+			</div>
+		</div>
+	</div>
+</Layout>
