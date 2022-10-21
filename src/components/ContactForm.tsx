@@ -29,9 +29,9 @@ const submitFormData = async (
 		fields.push({ name: key, value });
 	}
 
-	const body = {
+	const body: {[k: string]: any} = {
 		fields,
-		context: { ...formCtx, ipAddress: ip, hutk },
+		context: { ...formCtx, ipAddress: ip },
 		legalConsentOptions: {
 			legitimateInterest: {
 				value: true,
@@ -41,6 +41,8 @@ const submitFormData = async (
 			},
 		},
 	};
+
+	if (hutk) body.context.hutk = hutk;
 
 	await axios.post(`${baseURL}/${portalId}/${formId}`, body);
 };
