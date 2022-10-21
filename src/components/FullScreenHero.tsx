@@ -1,11 +1,9 @@
-import type { FC } from "react";
-
 interface IFullScreenHeroProps {
 	image: string;
 	altText: string;
 }
 
-const FullScreenHero: FC<IFullScreenHeroProps> = ({ image, altText }) => {
+const FullScreenHero = ({ image, altText }: IFullScreenHeroProps) => {
 	return (
 		<div className="mb-16 relative w-full sm:h-96 lg:h-fs">
 			<img

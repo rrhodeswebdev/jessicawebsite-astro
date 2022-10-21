@@ -1,11 +1,9 @@
-import type { FC } from "react";
-
 interface IHeadingProps {
 	title: string;
 	subHeading?: string;
 }
 
-const Heading: FC<IHeadingProps> = ({ title, subHeading }) => {
+const Heading = ({ title, subHeading }: IHeadingProps) => {
 	return (
 		<div className="text-center border-b border-shade my-8">
 			<h1 className="text-4xl lg:text-5xl pb-4 font-light">{title}</h1>

@@ -1,5 +1,3 @@
-import type { FC } from "react";
-
 interface IButtonProps {
 	children: React.ReactNode;
 	href: string;
@@ -7,12 +5,12 @@ interface IButtonProps {
 	external?: boolean;
 }
 
-const Button: React.FC<IButtonProps> = ({
+const Button = ({
 	children,
 	href,
 	outlineVariant,
 	external,
-}) => {
+}: IButtonProps) => {
 	return (
 		<a
 			target={external ? "_blank" : "_self"}

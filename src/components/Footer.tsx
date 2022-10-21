@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import {
 	FaFacebookSquare,
 	FaInstagram,
@@ -6,7 +5,7 @@ import {
 	FaGoogle,
 } from "react-icons/fa/index";
 
-const Footer: FC = () => {
+const Footer = () => {
 	return (
 		<footer className="container mx-auto p-8">
 			<div className="flex justify-center content-center mb-4">
