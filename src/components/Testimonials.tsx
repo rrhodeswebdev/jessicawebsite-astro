@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -9,7 +8,7 @@ interface ITestimonialsProps {
 	}[];
 }
 
-const Testimonials: FC<ITestimonialsProps> = ({ testimonials }) => {
+const Testimonials = ({ testimonials }: ITestimonialsProps) => {
 	const settings = {
 		dots: false,
 		infinite: true,

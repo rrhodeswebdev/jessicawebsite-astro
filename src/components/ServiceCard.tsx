@@ -1,4 +1,3 @@
-import type { FC } from "react";
 import Button from "./Button";
 
 interface IServiceCardProps {
@@ -10,7 +9,7 @@ interface IServiceCardProps {
 	};
 }
 
-const ServiceCard: FC<IServiceCardProps> = ({ service }) => {
+const ServiceCard = ({ service }: IServiceCardProps) => {
 	return (
 		<div className="m-6 p-6 w-80">
 			<h2 className="text-4xl text-center m-4 p-4 tracking-wide font-light">

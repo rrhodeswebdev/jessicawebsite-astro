@@ -1,5 +1,3 @@
-import type { FC } from "react";
-
 interface IAccountBioCardProps {
 	key: number;
 	name: string;
@@ -8,12 +6,12 @@ interface IAccountBioCardProps {
 	slug: string;
 }
 
-const AccountBioCard: FC<IAccountBioCardProps> = ({
+const AccountBioCard = ({
 	name,
 	image,
 	title,
 	slug,
-}) => {
+}: IAccountBioCardProps) => {
 	return (
 		<div>
 			<div className="text-center mb-2">

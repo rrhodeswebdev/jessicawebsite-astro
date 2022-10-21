@@ -1,5 +1,3 @@
-import type { FC } from "react";
-
 interface IServiceInfoBlockProps {
 	key: string;
 	service: {
@@ -18,7 +16,7 @@ interface IServiceInfoBlockProps {
 	};
 }
 
-const ServiceInfoBlock: FC<IServiceInfoBlockProps> = ({ service }) => {
+const ServiceInfoBlock = ({ service }: IServiceInfoBlockProps) => {
 	return (
 		<div className="mb-8 pb-8 text-center font-light border-b border-secondary">
 			<h3 className="text-3xl pb-4">{service.title}</h3>

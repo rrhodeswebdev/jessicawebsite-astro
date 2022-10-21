@@ -1,5 +1,4 @@
 import { useState } from "react";
-import type { FC } from "react";
 import { HiOutlineMenu as MenuIcon } from "react-icons/hi/index";
 import { Transition } from "@headlessui/react";
 
@@ -13,7 +12,7 @@ interface IActiveLinkProps {
 	urlPath: string;
 }
 
-const ActiveLink: FC<IActiveLinkProps> = ({ children, href, urlPath }) => {
+const ActiveLink = ({ children, href, urlPath }: IActiveLinkProps) => {
 	return (
 		<a
 			href={href}
@@ -28,7 +27,7 @@ const ActiveLink: FC<IActiveLinkProps> = ({ children, href, urlPath }) => {
 	);
 };
 
-const Navbar: FC<INavbarProps> = ({ urlPath }) => {
+const Navbar = ({ urlPath }: INavbarProps) => {
 	const [mobileToggle, setMobileToggle] = useState(false);
 
 	const onMobileMenuClick = () => {

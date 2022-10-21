@@ -1,5 +1,3 @@
-import type { FC } from "react";
-
 interface IHoverCardProps {
 	key: number;
 	image: string;
@@ -9,7 +7,7 @@ interface IHoverCardProps {
 	externalLink: boolean;
 }
 
-const HoverCard: FC<IHoverCardProps> = (props) => {
+const HoverCard = (props: IHoverCardProps) => {
 	const { image, slug, buttonText, title, externalLink } = props;
 
 	return (
