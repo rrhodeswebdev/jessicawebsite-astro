@@ -2,8 +2,28 @@
 import Layout from '../../layouts/Layout.astro';
 import Heading from '../../components/Heading';
 import Button from '../../components/Button';
+import HoverCard from '../../components/HoverCard';
 import salonServicesImage from "/public/salon-services.jpeg";
 import bridalServicesImage from "/public/bridal-services.jpeg";
+
+const serviceCardMappings = [
+	{
+		id: 1,
+		image: salonServicesImage,
+		slug: '/services/salon',
+		buttonText: 'Salon Services',
+		title: 'Salon',
+		externalLink: false,
+	},
+	{
+		id: 2,
+		image: bridalServicesImage,
+		slug: '/services/bridal',
+		buttonText: 'Bridal Services',
+		title: 'Bridal',
+		externalLink: false,
+	}
+];
 ---
 
 <Layout
@@ -13,40 +33,17 @@ import bridalServicesImage from "/public/bridal-services.jpeg";
 <section class="container mx-auto max-w-6xl px-4">
     <Heading title="Services" />
     <div class="flex flex-col sm:flex-row gap-12 mb-16 justify-center">
-        <div class="max-w-sm mb-8">
-            <h2 class="text-center font-light text-2xl mb-4">Salon</h2>
-            <div class="group relative flex place-items-center overflow-hidden mb-16m">
-                <img
-                    src={salonServicesImage}
-                    class="object-cover ease-in-out duration-500"
-                />
-                <div class="bg-secondary opacity-0 absolute w-full h-full transition-opacity duration-500 group-hover:opacity-80" />
-                <div class="w-full absolute p-8 group-hover:opacity-100 opacity-0 transition-opacity">
-                    <a href="/services/salon">
-                        <button class="w-full cursor-pointer border border-white p-4 text-secondary bg-lightWhite group-hover:opacity-100 uppercase opacity-0 transition-opacity">
-                            Salon Services
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-sm mb-8">
-            <h2 class="text-center font-light text-2xl mb-4">Bridal</h2>
-            <div class="group relative flex place-items-center overflow-hidden mb-16m">
-                <img
-                    src={bridalServicesImage}
-                    class="object-cover ease-in-out duration-500"
-                />
-                <div class="bg-secondary opacity-0 absolute w-full h-full transition-opacity duration-500 group-hover:opacity-80" />
-                <div class="w-full absolute p-8 group-hover:opacity-100 opacity-0 transition-opacity">
-                    <a href="/services/bridal">
-                        <button class="w-full cursor-pointer border border-white p-4 text-secondary bg-lightWhite group-hover:opacity-100 uppercase opacity-0 transition-opacity">
-                            Bridal Services
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
+        {serviceCardMappings.map((card) => (
+            <HoverCard
+                key={card.id}
+                image={card.image}
+                slug={card.slug}
+                buttonText={card.buttonText}
+                title={card.title}
+                externalLink={card.externalLink}
+                includeBotBorder={false}
+            />
+        ))}
     </div>
     <div class="flex flex-col md:flex-row justify-center items-center p-6 md:mb-8">
         <Button
