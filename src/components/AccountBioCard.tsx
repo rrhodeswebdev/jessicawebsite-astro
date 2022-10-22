@@ -24,10 +24,10 @@ const AccountBioCard = ({
 					src={image}
 					className="object-cover ease-in-out duration-500"
 				/>
-				<div className="bg-secondary opacity-0 absolute w-full h-full transition-opacity duration-500 group-hover:opacity-80" />
-				<div className="w-full absolute p-8 group-hover:opacity-100 opacity-0 transition-opacity">
+				<div className="bg-secondary opacity-60 sm:opacity-0 absolute w-full h-full transition-opacity duration-500 sm:group-hover:opacity-60" />
+				<div className="w-full absolute p-8 opacity-100 sm:group-hover:opacity-100 sm:opacity-0 transition-opacity">
 					<a href={`/about/${slug}`}>
-						<button className="w-full cursor-pointer border border-white p-4 text-secondary bg-lightWhite group-hover:opacity-100 uppercase opacity-0 transition-opacity">
+						<button className="w-full cursor-pointer border border-white p-4 text-secondary bg-lightWhite opacity-100 sm:group-hover:opacity-100 uppercase sm:opacity-0 transition-opacity">
 							{`Meet ${name}`}
 						</button>
 					</a>
