@@ -28,14 +28,12 @@ const { title, description } = Astro.props;
 		/>
 
 		<script
-			type="text/partytown"
 			async
 			src={`https://www.googletagmanager.com/gtag/js?id=${
 				import.meta.env.PUBLIC_GOOGLE_ANALYTICS
 			}`}
 		></script>
 		<script
-			type="text/partytown"
 			dangerouslySetInnerHTML={{
 				__html: `
             window.dataLayer = window.dataLayer || [];
@@ -55,7 +53,7 @@ const { title, description } = Astro.props;
 		</main>
 		<Footer client:load />
 		<script
-			type='text/partytown'
+			type='text/javascript'
 			id='hs-script-loader'
 			async
 			defer
@@ -64,4 +62,4 @@ const { title, description } = Astro.props;
 	</body>
 </html>
 
-<style is:global></style>
+<style global></style>
