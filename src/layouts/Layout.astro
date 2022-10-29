@@ -1,10 +1,10 @@
 ---
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export interface Props {
-	title: string;
-	description: string;
+    title: string;
+    description: string;
 }
 
 const { title, description } = Astro.props;
@@ -12,56 +12,49 @@ const { title, description } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
-		<title>{title}</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
+        <title>{title}</title>
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-			rel="stylesheet"
-		/>
-
-		<script
-			type="text/partytown"
-			async
-			src={`https://www.googletagmanager.com/gtag/js?id=${
-				import.meta.env.PUBLIC_GOOGLE_ANALYTICS
-			}`}
-		></script>
-		<script
-			type="text/partytown"
-			dangerouslySetInnerHTML={{
-				__html: `
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            type="text/partytown"
+            src='https://www.googletagmanager.com/gtag/js?id=UA-140378431-1'
+        ></script>
+        <script type="text/partytown">
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
-            gtag('config', '${import.meta.env.PUBLIC_GOOGLE_ANALYTICS}', {
-              page_path: window.location.pathname,
-            });
-          `,
-			}}
-		></script>
-	</head>
-	<body>
-		<Navbar client:load urlPath={Astro.url.pathname} />
-		<main class="flex-grow">
-			<slot />
-		</main>
-		<Footer client:load />
-		<script
-			type='text/javascript'
-			id='hs-script-loader'
-			async
-			defer
-			src='//js.hs-scripts.com/6152086.js'
-		></script>
-	</body>
+            gtag('config', 'UA-140378431-1');
+        </script>
+    </head>
+    <body>
+        <Navbar client:load urlPath={Astro.url.pathname} />
+        <main class="flex-grow">
+            <slot />
+        </main>
+        <Footer client:load />
+        <script
+            type="text/javascript"
+            id="hs-script-loader"
+            async
+            defer
+            src="//js.hs-scripts.com/6152086.js"
+        ></script>
+    </body>
 </html>
 
-<style is:global></style>
+<style is:global>
+
+</style>
