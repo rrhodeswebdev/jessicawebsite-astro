@@ -1,12 +1,12 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Heading from '../../components/Heading';
-import Button from '../../components/Button';
-import ServiceInfoBlock from '../../components/ServiceInfoBlock';
+import Layout from "../../layouts/Layout.astro";
+import Heading from "../../components/Heading";
+import Button from "../../components/Button";
+import ServiceInfoBlock from "../../components/ServiceInfoBlock";
 import bridalServicesImage1 from "/public/bridal-services-1.jpeg";
 import bridalServicesImage2 from "/public/bridal-services-2.jpeg";
 import bridalServicesImage3 from "/public/bridal-services-3.jpeg";
-import { sanityClient } from '../../utils/sanityClient';
+import { sanityClient } from "../../utils/sanityClient";
 
 const servicesQuery = `{
  		"bridalHair": *[_type == 'services' && category == 'Bridal Hair'] | order(_createdAt asc),
@@ -28,12 +28,14 @@ interface IService {
     description: string;
     time: number;
     title: string;
-}[];
+}
+[];
 ---
 
 <Layout
-	title="Salon Services - Graced Studio"
-	description="Our salon services include coloring, styling, and extensions all customized to your needs."
+    title="Salon Services - Graced Studio"
+    description="Our salon services include coloring, styling, and extensions all customized to your needs."
+    client:load
 >
     <section class="container mx-auto max-w-6xl px-4">
         <Heading title="Bridal Services" />
@@ -44,13 +46,17 @@ interface IService {
         </div>
         <div class="mb-16">
             <h2 class="text-4xl mb-10 p-4 text-center bg-shade">Hair</h2>
-            {services.bridalHair.map((service: IService) => (
-                <ServiceInfoBlock service={service} key={service._id} />
-            ))}
+            {
+                services.bridalHair.map((service: IService) => (
+                    <ServiceInfoBlock service={service} key={service._id} />
+                ))
+            }
             <h2 class="text-4xl mb-10 p-4 text-center bg-shade">Make-up</h2>
-            {services.bridalMakeup.map((service: IService) => (
-                <ServiceInfoBlock service={service} key={service._id} />
-            ))}
+            {
+                services.bridalMakeup.map((service: IService) => (
+                    <ServiceInfoBlock service={service} key={service._id} />
+                ))
+            }
         </div>
         <div class="p-6 mb-8">
             <p class="text-center font-light text-sm italic">
@@ -59,7 +65,9 @@ interface IService {
                 price.
             </p>
         </div>
-        <div class="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-6 md:mb-8">
+        <div
+            class="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-6 md:mb-8"
+        >
             <Button href="/contact">Request</Button>
         </div>
     </section>

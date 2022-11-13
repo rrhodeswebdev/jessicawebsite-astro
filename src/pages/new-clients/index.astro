@@ -11,25 +11,25 @@ const newClientMappings = [
 	{
 		id: 1,
 		image: newClientsTeamImage,
-		slug: 'about',
-		buttonText: 'Meet The Team',
-		title: 'Meet The Team',
+		slug: "about",
+		buttonText: "Meet The Team",
+		title: "Meet The Team",
 		externalLink: false,
 	},
 	{
 		id: 2,
 		image: newClientsChooseImage,
-		slug: 'https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start',
-		buttonText: 'Booking',
-		title: 'Booking',
+		slug: "https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start",
+		buttonText: "Booking",
+		title: "Booking",
 		externalLink: true,
 	},
 	{
 		id: 3,
 		image: newClientsProcessImage,
-		slug: 'new-clients/graced-experience',
-		buttonText: 'What To Expect',
-		title: 'What To Expect',
+		slug: "new-clients/graced-experience",
+		buttonText: "What To Expect",
+		title: "What To Expect",
 		externalLink: false,
 	},
 ];
@@ -38,23 +38,28 @@ const newClientMappings = [
 <Layout
 	title="New Clients - Graced Studio"
 	description="Graced Studio is proud to offer an experience for our new clients that is relaxing and stress free."
+	client:load
 >
-    <div class="container mx-auto p-6 max-w-6xl">
-        <Heading title="Welcome To Your New Salon Home" />
-        <div class="mb-8 lg:mb-16 object-cover col-span-full lg:col-start-1 lg:col-end-4">
-            <img src={newClientsImage} alt="Welcome new clients" />
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 mb-16">
-            {newClientMappings.map((card) => (
-                <HoverCard
-                    key={card.id}
-                    image={card.image}
-                    slug={card.slug}
-                    buttonText={card.buttonText}
-                    title={card.title}
-                    externalLink={card.externalLink}
-                />
-            ))}
-        </div>
-    </div>
+	<div class="container mx-auto p-6 max-w-6xl">
+		<Heading title="Welcome To Your New Salon Home" />
+		<div
+			class="mb-8 lg:mb-16 object-cover col-span-full lg:col-start-1 lg:col-end-4"
+		>
+			<img src={newClientsImage} alt="Welcome new clients" />
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 mb-16">
+			{
+				newClientMappings.map((card) => (
+					<HoverCard
+						key={card.id}
+						image={card.image}
+						slug={card.slug}
+						buttonText={card.buttonText}
+						title={card.title}
+						externalLink={card.externalLink}
+					/>
+				))
+			}
+		</div>
+	</div>
 </Layout>

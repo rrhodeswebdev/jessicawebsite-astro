@@ -1,13 +1,14 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Heading from '../../components/Heading';
-import Button from '../../components/Button';
+import Layout from "../../layouts/Layout.astro";
+import Heading from "../../components/Heading";
+import Button from "../../components/Button";
 import liliGracedImage from "/public/lili-graced-bio.jpeg";
 ---
 
 <Layout
-	title="Liliana Grace - Graced Studio"
-	description="Liliana Grace is the original graced babe and the inspiration for Graced Studio."
+    title="Liliana Grace - Graced Studio"
+    description="Liliana Grace is the original graced babe and the inspiration for Graced Studio."
+    client:load
 >
     <div class="container mx-auto p-6 max-w-6xl">
         <div>
@@ -21,26 +22,29 @@ import liliGracedImage from "/public/lili-graced-bio.jpeg";
                 </div>
                 <div>
                     <p class="font-light mb-4">
-                        Meet Liliana Grace. Now obviously Liliana doesn’t work at Graced
-                        Studio, but she is the inspiration behind the salon.
+                        Meet Liliana Grace. Now obviously Liliana doesn’t work
+                        at Graced Studio, but she is the inspiration behind the
+                        salon.
                     </p>
                     <p class="font-light mb-4">
-                        Liliana, of course, is my daughter. My husband and I gave her
-                        the middle name “Grace” because we truly feel like God was
-                        gracing our lives with a daughter. And as she grows up, His love
-                        and grace is even more evident. Liliana is a beautiful, joyful
-                        ray of sunshine. She brings light and love to everyone she
-                        meets.
+                        Liliana, of course, is my daughter. My husband and I
+                        gave her the middle name “Grace” because we truly feel
+                        like God was gracing our lives with a daughter. And as
+                        she grows up, His love and grace is even more evident.
+                        Liliana is a beautiful, joyful ray of sunshine. She
+                        brings light and love to everyone she meets.
                     </p>
                     <p class="font-light mb-4">
-                        This was my vision for Graced Studio. To create an environment
-                        where you can relax and enjoy your time carefree, and leave
-                        feeling lighter and happier than when you arrived.
+                        This was my vision for Graced Studio. To create an
+                        environment where you can relax and enjoy your time
+                        carefree, and leave feeling lighter and happier than
+                        when you arrived.
                     </p>
                     <p class="font-light mb-4">
-                        My promise to you, as it is to Liliana, is to show up each day
-                        and bring my best. My best attitude, my best focus, and my best
-                        talent. You, like my daughter, deserve it!
+                        My promise to you, as it is to Liliana, is to show up
+                        each day and bring my best. My best attitude, my best
+                        focus, and my best talent. You, like my daughter,
+                        deserve it!
                     </p>
                     <p class="font-light mb-2">God Bless,</p>
                     <p class="font-light">Jesse Rhodes</p>
@@ -50,7 +54,9 @@ import liliGracedImage from "/public/lili-graced-bio.jpeg";
                 </div>
             </div>
         </div>
-        <div class="flex flex-col md:flex-row justify-center items-center p-6 md:mb-8">
+        <div
+            class="flex flex-col md:flex-row justify-center items-center p-6 md:mb-8"
+        >
             <Button
                 href="https://squareup.com/appointments/book/f5ksza0xzqnzy3/LGZK3E9BBVKB5/start"
                 external
