@@ -27,25 +27,6 @@ const { title, description } = Astro.props;
 			rel="stylesheet"
 		/>
 
-		<!-- <script
-			async
-			src={`https://www.googletagmanager.com/gtag/js?id=${
-				import.meta.env.PUBLIC_GOOGLE_ANALYTICS
-			}`}
-		></script>
-		<script
-			dangerouslySetInnerHTML={{
-				__html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', ${import.meta.env.PUBLIC_GOOGLE_ANALYTICS}, {
-              page_path: window.location.pathname,
-            });
-          `,
-			}}
-		></script> -->
-
 		<script
 			type="text/partytown"
 			src={`https://www.googletagmanager.com/gtag/js?id=${
