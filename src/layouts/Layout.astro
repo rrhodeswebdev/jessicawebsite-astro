@@ -27,7 +27,7 @@ const { title, description } = Astro.props;
 			rel="stylesheet"
 		/>
 
-		<script
+		<!-- <script
 			async
 			src={`https://www.googletagmanager.com/gtag/js?id=${
 				import.meta.env.PUBLIC_GOOGLE_ANALYTICS
@@ -44,7 +44,22 @@ const { title, description } = Astro.props;
             });
           `,
 			}}
+		></script> -->
+
+		<script
+			type="text/partytown"
+			src={`https://www.googletagmanager.com/gtag/js?id=${
+				import.meta.env.PUBLIC_GOOGLE_ANALYTICS
+			}`}
 		></script>
+		<script type="text/partytown">
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+			gtag("config", "UA-140378431-1");
+		</script>
 	</head>
 	<body>
 		<Navbar client:load urlPath={Astro.url.pathname} />
@@ -53,13 +68,15 @@ const { title, description } = Astro.props;
 		</main>
 		<Footer client:load />
 		<script
-			type='text/javascript'
-			id='hs-script-loader'
+			type="text/javascript"
+			id="hs-script-loader"
 			async
 			defer
-			src='//js.hs-scripts.com/6152086.js'
+			src="//js.hs-scripts.com/6152086.js"
 		></script>
 	</body>
 </html>
 
-<style is:global></style>
+<style is:global>
+
+</style>
