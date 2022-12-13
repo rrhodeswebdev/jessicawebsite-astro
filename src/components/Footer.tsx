@@ -16,13 +16,13 @@ const Footer = () => {
 				>
 					<FaFacebookSquare className="text-2xl mx-4 my-2 cursor-pointer text-primary hover:text-accent transition-colors" />
 				</a>
-				{/* <a
+				<a
 					href="https://www.instagram.com/graced_studio/"
 					target="_blank"
 					rel="noreferrer"
 				>
 					<FaInstagram className="text-2xl mx-4 my-2 cursor-pointer text-primary hover:text-accent transition-colors" />
-				</a> */}
+				</a>
 				<a
 					href="https://g.page/r/CZEWWt74Cb8hEAE"
 					target="_blank"
