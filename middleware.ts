@@ -1,5 +1,5 @@
 export const config = {
-    matcher: '/about'
+    matcher: '/about/camilla'
 }
 
 export default function middelware(request: any) {
