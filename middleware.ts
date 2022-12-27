@@ -1,5 +1,5 @@
 export const config = {
-    matcher: '/'
+    matcher: '/about'
 }
 
 export default function middelware(request: any) {
