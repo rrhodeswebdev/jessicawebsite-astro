@@ -18,20 +18,13 @@ const bioMappings = [
 	},
 	{
 		id: 2,
-		name: 'Camilla',
-		image: camillaBioImage,
-		title: 'Stylist',
-		slug: 'camilla',
-	},
-	{
-		id: 3,
 		name: 'Jenna',
 		image: jennaBioImage,
 		title: 'Makeup Artist',
 		slug: 'jenna',
 	},
 	{
-		id: 4,
+		id: 3,
 		name: 'Liliana',
 		image: gracedBioImage,
 		title: 'Original Graced Babe',
@@ -49,7 +42,7 @@ const bioMappings = [
         <div class="mb-8 lg:mb-16 object-cover col-span-full lg:col-start-1 lg:col-end-4">
             <img src={meetBabesImage} alt="Meet the babes" />
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-6 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-6 mb-16">
             {bioMappings.map((bio) => (
                 <AccountBioCard
                     key={bio.id}
